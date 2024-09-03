@@ -1,7 +1,14 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "file": "week1/cubicdisarray/cubicdisarray.js",
+    "name": "Cubic Disarray",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
+  },
+
+  {
+    "file": "experiments/sparkling1.js",
+    "name": "CubicDisarray",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
   }
 ]
+
