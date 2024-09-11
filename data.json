@@ -1,13 +1,61 @@
 [
   {
     "file": "week1/cubicdisarray/cubicdisarray.js",
-    "name": "Cubic Disarray",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
+    "name": "Cubic Disarray 0",
+    "description": "Inspried by the artwork of Georg Nee: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/"
   },
 
   {
-    "file": "experiments/sparkling1.js",
-    "name": "CubicDisarray",
+    "file": "week1/cubicdisarray/cubicdisarray1.js",
+    "name": "Cubic Disarray 130119",
+    "description": "Cubic Disarray with bolder stroke!"
+  },
+
+  {
+    "file": "week1/cubicdisarray/cubicdisarray2.js",
+    "name": "Cubic Disarray 1-1",
+    "description": "Cubic Disarray but no more rotation so it's less messy."
+  },
+
+  {
+    "file": "week1/hypnoticsquares/hypnoticsquares.js",
+    "name": "Hypnotic Squares 0",
+    "description": "Inspried by William Kolomyjec's artwork: Hypnotic Squares. Tutorial: https://generativeartistry.com/tutorials/hypnotic-squares/."
+  },
+ 
+  {
+    "file": "week1/hypnoticsquares/hypnoticsquares1.js",
+    "name": "Hypnotic Squares (0)",
+    "description": "Organized Squares"
+  },
+
+  {
+    "file": "week1/hypnoticsquares/hypnoticsquares2.js",
+    "name": "Hypnotic Squares 7*",
+    "description": "Hypnotic Square and it's the same but there's more colors so it's not."
+  },
+
+  {
+    "file": "week1/circlepacking/circlepacking.js",
+    "name": "Circle Packing 0",
+    "description": "Big cirles, less big circles and not big circles. Tutorial: https://generativeartistry.com/tutorials/circle-packing/"
+  },
+ 
+  {
+    "file": "week1/circlepacking/circlepacking1.js",
+    "name": "Circle Packing ^^",
+    "description": "Circles have colors now."
+  },
+
+  {
+    "file": "week1/circlepacking/circlepacking2.js",
+    "name": "Circle Packing COS",
+    "description": "Circles turned Spirals"
+  },
+
+  {
+    "file": "week2/mine.js",
+    "name": "my work but hasnt been done",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
   }
 ]

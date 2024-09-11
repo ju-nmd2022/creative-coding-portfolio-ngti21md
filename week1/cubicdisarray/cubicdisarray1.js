@@ -1,5 +1,6 @@
 function setup() {
   createCanvas(600, 600);
+  noLoop();
 }
 
 const squareSize = 30;
@@ -10,7 +11,7 @@ const offset = 10;
 function draw() {
   background(255);
   stroke(108, 145, 126);
-  strokeWeight(10);
+  strokeWeight(5);
 
   for (let i = squareSize; i <= width - squareSize; i += squareSize) {
     for (let j = squareSize; j <= height - squareSize; j += squareSize) {
@@ -29,6 +30,5 @@ function draw() {
     }
   }
 
-  noLoop();
 }
 

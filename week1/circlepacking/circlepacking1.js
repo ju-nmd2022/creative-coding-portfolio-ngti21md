@@ -1,8 +1,6 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight); 
-  noLoop(); 
-  stroke(0);
-  strokeWeight(3); 
+  createCanvas(650, 650); 
+  noLoop();  
 
   for (let i = 0; i < totalCircles; i++) {
     createAndDrawCircle();
@@ -45,6 +43,21 @@ function createAndDrawCircle() {
   }
 
   circles.push(newCircle);
+
+  if (newCircle.radius >= maxRadius * 0.8) { 
+    stroke(255, 105, 180);
+    strokeWeight(2);
+  } else if (newCircle.radius >= maxRadius * 0.3) { 
+    stroke(0, 255, 255); 
+    strokeWeight(2);
+  } else if (newCircle.radius >= maxRadius * 0.2) {
+    stroke(144, 238, 144);
+    strokeWeight(3); 
+  } else {
+    stroke(0); 
+    strokeWeight(1);
+  }
+
   ellipse(newCircle.x, newCircle.y, newCircle.radius * 2);
 }
 

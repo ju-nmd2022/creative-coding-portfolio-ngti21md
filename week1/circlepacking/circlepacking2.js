@@ -1,8 +1,8 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight); 
+  createCanvas(650, 650); 
   noLoop(); 
-  stroke(0);
-  strokeWeight(3); 
+  strokeWeight(2); 
+  noFill(); 
 
   for (let i = 0; i < totalCircles; i++) {
     createAndDrawCircle();
@@ -45,7 +45,35 @@ function createAndDrawCircle() {
   }
 
   circles.push(newCircle);
-  ellipse(newCircle.x, newCircle.y, newCircle.radius * 2);
+
+  if (newCircle.radius >= maxRadius * 0.8) { 
+    stroke(255, 105, 180); 
+  } else if (newCircle.radius >= maxRadius * 0.3) { 
+    stroke(0, 255, 255); 
+  } else if (newCircle.radius >= maxRadius * 0.2) {
+    stroke(144, 238, 144); 
+  } else {
+    stroke(0); 
+  }
+
+  drawSpiral(newCircle.x, newCircle.y, newCircle.radius);
+}
+
+function drawSpiral(x, y, radius) {
+  noFill();
+  beginShape();
+  let angle = 0;
+  let increment = 0.05;
+  let maxAngle = TWO_PI * 5; // Adjust the spiral's number of turns
+
+  while (angle < maxAngle) {
+    let r = map(angle, 0, maxAngle, radius * 0.5, radius); // Spiral radius varies
+    let dx = r * cos(angle);
+    let dy = r * sin(angle);
+    vertex(x + dx, y + dy);
+    angle += increment;
+  }
+  endShape();
 }
 
 function doesCircleHaveACollision(circle) {
