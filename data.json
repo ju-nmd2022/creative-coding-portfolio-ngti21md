@@ -2,7 +2,7 @@
   {
     "file": "week1/cubicdisarray/cubicdisarray.js",
     "name": "Cubic Disarray 0",
-    "description": "Inspried by the artwork of Georg Nee: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/"
+    "description": "Inspried by the artwork of Georg Nee: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/."
   },
 
   {
@@ -26,7 +26,7 @@
   {
     "file": "week1/hypnoticsquares/hypnoticsquares1.js",
     "name": "Hypnotic Squares (0)",
-    "description": "Organized Squares"
+    "description": "Organized Squares."
   },
 
   {
@@ -38,7 +38,7 @@
   {
     "file": "week1/circlepacking/circlepacking.js",
     "name": "Circle Packing 0",
-    "description": "Big cirles, less big circles and not big circles. Tutorial: https://generativeartistry.com/tutorials/circle-packing/"
+    "description": "Big cirles, less big circles and not big circles. Tutorial: https://generativeartistry.com/tutorials/circle-packing/."
   },
  
   {
@@ -50,7 +50,7 @@
   {
     "file": "week1/circlepacking/circlepacking2.js",
     "name": "Circle Packing COS",
-    "description": "Circles turned Spirals"
+    "description": "Circles turned Spirals."
   },
 
   {
