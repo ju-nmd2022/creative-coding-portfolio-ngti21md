@@ -8,7 +8,7 @@ function draw() {
   rotateX(60);
 
   noFill();
-  stroke(225);
+  stroke(225); 
   
   for (let i = 0; i < 40; i++ ) {
     //Colors changing

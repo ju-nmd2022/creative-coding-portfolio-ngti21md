@@ -13,7 +13,7 @@ let circles = [];
 const minRadius = 2;
 const maxRadius = 100;
 const totalCircles = 500;
-const createCircleAttempts = 500;
+const createCircleAttempts = 500; 
 
 function createAndDrawCircle() {
   let newCircle;
