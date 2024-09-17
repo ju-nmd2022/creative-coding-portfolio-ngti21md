@@ -1,6 +1,5 @@
 function setup() {
-  createCanvas(650, 650); 
-  noLoop();  
+  createCanvas(650, 650);  
 
   for (let i = 0; i < totalCircles; i++) {
     createAndDrawCircle();

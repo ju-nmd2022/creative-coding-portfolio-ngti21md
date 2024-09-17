@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  noLoop();
+  
 }
 
 const squareSize = 30;

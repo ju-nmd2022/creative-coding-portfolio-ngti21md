@@ -2,7 +2,7 @@
   {
     "file": "week1/cubicdisarray/cubicdisarray.js",
     "name": "Cubic Disarray 0",
-    "description": "Inspried by the artwork of Georg Nees: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/."
+    "description": "Cubes. Inspried by the artwork of Georg Nees: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/."
   },
 
   {
@@ -20,7 +20,7 @@
   {
     "file": "week1/hypnoticsquares/hypnoticsquares.js",
     "name": "Hypnotic Squares 0",
-    "description": "Inspried by William Kolomyjec's artwork: Hypnotic Squares. Tutorial: https://generativeartistry.com/tutorials/hypnotic-squares/."
+    "description": "A lot of squares. Inspried by William Kolomyjec's artwork: Hypnotic Squares. Tutorial: https://generativeartistry.com/tutorials/hypnotic-squares/."
   },
  
   {
@@ -32,7 +32,7 @@
   {
     "file": "week1/hypnoticsquares/hypnoticsquares2.js",
     "name": "Hypnotic Squares 7*",
-    "description": "Hypnotic Square and it's the same but there's more colors so it's not."
+    "description": "Hypnotic Squares and it's the same but there's more colors so it's not."
   },
 
   {
@@ -52,11 +52,23 @@
     "name": "Circle Packing COS",
     "description": "Circles turned Spirals."
   },
+  
+  {
+    "file": "week2/sinewave.js",
+    "name": "Sine Wave",
+    "description": "A wave made of multiple hexagons.Inspried by Colorful Coding on Youtube. Sine wave structures. https://www.youtube.com/watch?v=vmhRlDyPHMQ."
+  },
 
   {
-    "file": "week2/mine.js",
-    "name": "my work but hasnt been done",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
+    "file": "week2/waves.js",
+    "name": "Interferenced Waves",
+    "description": "2 waves interfere."
+  },
+
+  {
+    "file": "week2/sphere.js",
+    "name": "Chromatic Sphere",
+    "description": "A chaotic sphere."
   }
 ]
 
