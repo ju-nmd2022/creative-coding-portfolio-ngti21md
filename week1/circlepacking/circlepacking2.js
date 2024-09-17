@@ -64,10 +64,10 @@ function drawSpiral(x, y, radius) {
   beginShape();
   let angle = 0;
   let increment = 0.05;
-  let maxAngle = TWO_PI * 5; // Adjust the spiral's number of turns
+  let maxAngle = TWO_PI * 5; // spiral's number of turns
 
   while (angle < maxAngle) {
-    let r = map(angle, 0, maxAngle, radius * 0.5, radius); // Spiral radius varies
+    let r = map(angle, 0, maxAngle, radius * 0.5, radius); // spiral radius varies
     let dx = r * cos(angle);
     let dy = r * sin(angle);
     vertex(x + dx, y + dy);
