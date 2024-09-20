@@ -2,6 +2,11 @@ function setup() {
   createCanvas(650, 650);
 }
 
+//Colors changing
+let r = map(sin(frameCount / 2), -1, 1, 100, 200);
+let b = map(tan(frameCount / 2), 0, 50, 100, 200);
+let g = map(cos(frameCount / 2), -1, 1, 200, 100); 
+
 class Cell {
   constructor(x, y, state) {
     this.x = x;
@@ -12,9 +17,9 @@ class Cell {
 
   draw(size) {
     if (this.state == 0) {
-      fill(255, 255, 255);
+      fill(225);
     } else {
-      fill(0, 0, 0);
+      fill(0);
     }
     rect(this.x * size, this.y * size, size, size);
   }
@@ -22,12 +27,13 @@ class Cell {
 
 let board = [];
 let size = 5;
-let lifecycle = 1;
+let lifecycle = 4;
 let count = 0;
 let boardsize = 200;
 
 for (let i = 0; i < boardsize; i++) {
   board.push([]);
+
   for (let j = 0; j < boardsize; j++) {
     let state = Math.round(Math.random() % 1);
     let cell = new Cell(i, j, state);
