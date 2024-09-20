@@ -69,6 +69,12 @@
     "file": "week2/sphere.js",
     "name": "Chromatic Sphere",
     "description": "A chaotic sphere."
+  },
+  
+  {
+    "file": "week2/test.js",
+    "name": "Chromatic Sphere",
+    "description": "A chaotic sphere."
   }
 ]
 
