@@ -1,101 +1,100 @@
-let ready = false;
-let volume = -9;
-let synth;
-let waveform;
-let slider;
+// Tutorial by Colorful Coding on Youtube. Sine wave structures. https://www.youtube.com/watch?v=vmhRlDyPHMQ.
+
+let hexagonOsc; 
+let triangleOsc; 
+let currentWaveType = 0; 
+let shapeType = 'hexagon'; 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  angleMode(DEGREES);
   
-  // UI elements
-  showButtons();
-  slider = createSlider(-20, 10, -9);
-  slider.position(500, 100);
-  slider.style('width', '80px');
-  slider.input(changeVolume);
-}
+  // Sound for hexagons
+  hexagonOsc = new Tone.Oscillator({
+    frequency: 110, 
+    type: 'sine' 
+  }).toDestination();
 
-function changeVolume() {
-  volume = slider.value();
-  Tone.Master.volume.value = volume;
-}
+  // Sound for triangle
+  triangleOsc = new Tone.Oscillator({
+    frequency: 220, 
+    type: 'triangle' 
+  }).toDestination();
 
-function showButtons() {
-  const types = ["sine", "triangle", "sawtooth", "square"];
-  for (let i = 0; i < types.length; i++) {
-    const type = types[i];
-    const button = createButton(type);
-    button.position(100 + i * 100, 100);
-    button.mousePressed(createButtonHandler(type)); // Use closure to capture 'type'
-  }
-}
+  // volume
+  hexagonOsc.volume.value = -20; 
+  triangleOsc.volume.value = -20; 
 
-function createButtonHandler(type) {
-  return function() {
-    if (synth) {
-      synth.oscillator.type = type;
-    }
-  };
-}
-
-function initAudio() {
-  synth = new Tone.Synth().toDestination();
-  synth.oscillator.type = "sine";
-  waveform = new Tone.Waveform(); // Visualize sound wave
-  Tone.Master.connect(waveform);
-  Tone.Master.volume.value = -9;
+  // sounds play
+  hexagonOsc.start();
+  triangleOsc.start();
+  Tone.Transport.start();
 }
 
 function draw() {
-  if (ready) {
-    background("grey");
-    stroke("white");
-    noFill();
-    let buffer = waveform.getValue(0);
-    let start = 0;
-    for (let i = 1; i < buffer.length; i++) {
-      if (buffer[i - 1] < 0 && buffer[i] >= 0) {
-        start = i; // Where the wave cycle starts
-        break;
-      }
+  background(0);
+  rotateX(60);
+  
+  noFill();
+  stroke(225); 
+
+  for (let i = 0; i < 40; i++) {
+    // Color changing
+    let r = map(sin(frameCount / 2), -1, 1, 100, 200);
+    let b = map(i, 0, 50, 100, 200);
+    let g = map(cos(frameCount / 2), -1, 1, 200, 100); 
+
+    stroke(r, b, g);
+    rotate(frameCount / 10); // Rotation based on frameCount
+
+    if (shapeType === 'hexagon') {
+      drawHexagon(i); 
+    } else if (shapeType === 'triangle') {
+      drawTriangle(i); 
     }
-    let end = buffer.length / 2 + start; // Where the wave cycle ends
-    beginShape();
-    for (let i = start; i < end; i++) {
-      let x = map(i, start, end, 0, width);
-      let y = map(buffer[i], -1, 1, 0, height);
-      vertex(x, y);
-    }
-    endShape();
-  } else {
-    background('grey');
-    fill('black');
-    textAlign(CENTER, CENTER);
-    text("click to start", width / 2, height / 2);
   }
+}
+
+function drawHexagon(index) {
+  beginShape();
+  for (let j = 0; j < 360; j += 60) {
+    let radius = index * 8;
+    let z = sin(frameCount * 5 + index * 8) * 50;
+
+    let x = radius * cos(j);
+    let y = radius * sin(j);
+
+    vertex(x, y, z);
+    
+    let frequency = map(z, -50, 50, 110, 220); 
+    hexagonOsc.frequency.setValueAtTime(frequency, Tone.now());
+  }
+  endShape(CLOSE);
+}
+
+function drawTriangle(index) {
+  beginShape();
+  for (let j = 0; j < 360; j += 120) { 
+    let radius = index * 8;
+    let z = sin(frameCount * 5 + index * 8) * 50;
+
+    let x = radius * cos(j);
+    let y = radius * sin(j);
+
+    vertex(x, y, z);
+
+    let frequency = map(z, -50, 50, 110, 220); 
+    triangleOsc.frequency.setValueAtTime(frequency, Tone.now());
+  }
+  endShape(CLOSE);
 }
 
 function mousePressed() {
-  if (!ready) {
-    ready = true;
-    initAudio();
-    return;
-  }
-  synth.triggerAttackRelease(random(220, 440), "8n");
+  // change shape type on mouse click
+  if (shapeType === 'hexagon') {
+    shapeType = 'triangle'; 
+  } else {
+    shapeType = 'hexagon'; 
+  }  
 }
 
-setInterval(() => {
-  if (ready) {
-    const minFrequency = 220; // Minimum frequency
-    const maxFrequency = 440; // Maximum frequency
-    const time = millis() / 1000; // Time-based noise
-    const frequency = map(noise(time / 10), 0, 1, minFrequency, maxFrequency);
-    console.log(time, frequency);
-    
-    // Randomly change oscillator type
-    if (Math.random() > 0.5) {
-      synth.oscillator.type = random(["sine", "triangle", "sawtooth", "square"]);
-    }
-    synth.triggerAttackRelease(frequency, "8n");
-  }
-}, 400);
