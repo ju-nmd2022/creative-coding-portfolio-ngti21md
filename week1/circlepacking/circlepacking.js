@@ -1,3 +1,5 @@
+// Tutorial: https://generativeartistry.com/tutorials/circle-packing/
+
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   noLoop(); 

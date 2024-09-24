@@ -2,7 +2,7 @@
   {
     "file": "week1/cubicdisarray/cubicdisarray.js",
     "name": "Cubic Disarray 0",
-    "description": "Cubes. Inspried by the artwork of Georg Nees: Cubic Disarray. Tutorial: https://generativeartistry.com/tutorials/cubic-disarray/."
+    "description": "Cubes. Inspried by the artwork of Georg Nees: Cubic Disarray."
   },
 
   {
@@ -20,7 +20,7 @@
   {
     "file": "week1/hypnoticsquares/hypnoticsquares.js",
     "name": "Hypnotic Squares 0",
-    "description": "A lot of squares. Inspried by William Kolomyjec's artwork: Hypnotic Squares. Tutorial: https://generativeartistry.com/tutorials/hypnotic-squares/."
+    "description": "A lot of squares. Inspried by William Kolomyjec's artwork: Hypnotic Squares."
   },
  
   {
@@ -38,7 +38,7 @@
   {
     "file": "week1/circlepacking/circlepacking.js",
     "name": "Circle Packing 0",
-    "description": "Big cirles, less big circles and not big circles. Tutorial: https://generativeartistry.com/tutorials/circle-packing/."
+    "description": "Big cirles, less big circles and not big circles."
   },
  
   {
@@ -52,29 +52,48 @@
     "name": "Circle Packing COS",
     "description": "Circles turned Spirals."
   },
-  
+
   {
-    "file": "week2/sinewave.js",
-    "name": "Sine Wave",
-    "description": "A wave made of multiple hexagons. Inspried by Colorful Coding on Youtube. Sine wave structures. https://www.youtube.com/watch?v=vmhRlDyPHMQ."
+    "file": "complex/flowfield.js",
+    "name": "Flow Field",
+    "description": "A Perlin Noise Flow Feild."
   },
 
   {
-    "file": "week2/waves.js",
+    "file": "complex/flowfield1.js",
+    "name": "Rainbow Slash",
+    "description": "A flow field but agents have different shape and colors."
+  },
+
+  {
+    "file": "complex/flowfield2.js",
+    "name": "Pink Horizon",
+    "description": "Looks like broken screen but it's pink. "
+  },
+  
+  {
+    "file": "tone/sinewave.js",
+    "name": "Sine Wave",
+    "description": "A wave made of multiple hexagons."
+  },
+
+  {
+    "file": "tone/waves.js",
     "name": "Waves",
     "description": "2 waves interfere."
   },
 
   {
-    "file": "week2/sphere.js",
+    "file": "tone/sphere.js",
     "name": "Chromatic Sphere",
     "description": "A chaotic sphere."
   },
-  
+
   {
-    "file": "week2/test.js",
+    "file": "tone/test.js",
     "name": "Chromatic Sphere",
     "description": "A chaotic sphere."
   }
+  
 ]
 

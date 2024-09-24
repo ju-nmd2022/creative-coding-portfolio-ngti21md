@@ -1,3 +1,5 @@
+// Tutorial: https://generativeartistry.com/tutorials/hypnotic-squares/
+
 function setup() {
   createCanvas(650, 650); 
   noLoop();
